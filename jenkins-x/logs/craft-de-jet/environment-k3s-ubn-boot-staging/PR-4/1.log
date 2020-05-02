@@ -1,0 +1,40 @@
+
+Showing logs for build [32mcraft-de-jet-environment-k3s-ub-fkdvq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-vk9g6[0m
+{"level":"info","ts":1588442376.6836197,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1588442376.6857233,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcraft-de-jet-environment-k3s-ub-fkdvq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-wm4mm[0m
+{"level":"info","ts":1588442378.1326709,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1588442378.1349201,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcraft-de-jet-environment-k3s-ub-fkdvq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcraft-de-jet-environment-k3s-ub-fkdvq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-craft-de-jet-environment-k3s-ub-fkdvq-vtvk4[0m
+{"level":"info","ts":1588442382.9979064,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1588442385.2512903,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/************/environment-k3s-ubn-boot-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcraft-de-jet-environment-k3s-ub-fkdvq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0c2af208ed3f7afef5fe107dbcbcabf77eaa9742,4:c5af1d70858271cf64d1a6a48d7f76cefd7c8916
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow c5af1d70858271cf64d1a6a48d7f76cefd7c8916: 0c2af208ed3f7afef5fe107dbcbcabf77eaa9742:
+DEBUG: ran git fetch --unshallow origin c5af1d70858271cf64d1a6a48d7f76cefd7c8916: 0c2af208ed3f7afef5fe107dbcbcabf77eaa9742: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard 0c2af208ed3f7afef5fe107dbcbcabf77eaa9742
+DEBUG: ran git reset --hard 0c2af208ed3f7afef5fe107dbcbcabf77eaa9742 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge c5af1d70858271cf64d1a6a48d7f76cefd7c8916
+DEBUG: ran git merge c5af1d70858271cf64d1a6a48d7f76cefd7c8916 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 0c2af208ed3f7afef5fe107dbcbcabf77eaa9742..HEAD
+Merged SHA c5af1d70858271cf64d1a6a48d7f76cefd7c8916 with commit message 'chore: Promote spring-api2 to version 0.0.1' into base branch master
+
+Showing logs for build [32mcraft-de-jet-environment-k3s-ub-fkdvq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
